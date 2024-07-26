@@ -1,0 +1,106 @@
+/* Dark Mode */
+.dark-mode {
+    background-color: var(--dark);
+    color: white;
+}
+
+
+.dark-mode .btn {
+    border: 2px solid white;
+}
+
+.dark-mode #menuIcon g,
+.dark-mode #menuIcon path {
+    stroke: white;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .navbar-nav a,
+.dark-mode .project-skills a  {
+    color: white;
+}
+.dark-mode .navbar-nav { 
+    background-color: var(--dark);
+}
+
+.dark-mode .project,
+.dark-mode .projects,
+.dark-mode .project.first-project .project-img,
+.dark-mode .project.second-project .project-img,
+.dark-mode .project.third-project .project-img { 
+    background: var(--dark-mode);
+}
+
+
+.dark-mode .btn {
+background-color: var(--dark);
+color: white;
+}
+
+.dark-mode .project-tech-stack p {
+    box-shadow: 2px 2px 0px white;
+    border: 2px solid white;
+    color: white;
+}
+
+.dark-mode  .box {
+    background-color: var(--dark);
+    color: white;
+}
+
+.dark-mode  button.prev, .dark-mode  button.next {
+    color:white;
+}
+
+
+.dark-mode .project-tech-stack .html {
+    box-shadow: 2px 2px 0px var(--purple);
+    color: var(--purple);
+}
+
+.dark-mode .project-tech-stack .css {
+    box-shadow: 2px 2px 0px var(--green);
+    color: var(--green);
+}
+
+.dark-mode .project-tech-stack .javascript {
+    box-shadow: 2px 2px 0px var(--pink);
+    color: var(--pink);
+}
+
+.dark-mode .project-tech-stack .bootstrap {
+    box-shadow: 2px 2px 0px var(--yellow);
+    color: var(--yellow);
+}
+
+.dark-mode .project-tech-stack .php {
+    box-shadow: 2px 2px 0px var(--blue);
+    color: var(--blue);
+}
+
+.dark-mode .project a:hover {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.dark-mode .dot.active {
+    background-color: var(--purple);
+}
+
+
+.dark-mode .bar {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    
+.dark-mode  .navbar-collapse {
+    border: 2px solid white;
+}
+
+.dark-mode  .nav-item:hover {
+    color: var(--purple);
+}
+
+}
+
