@@ -170,7 +170,7 @@ h3 {
 .bar {
     width: 30px;
     height: 3px;
-    background-color: currentColor;
+    background-color: white;
     transition: all 0.3s ease-in-out;
 }
 
