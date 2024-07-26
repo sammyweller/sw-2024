@@ -90,6 +90,7 @@ color: white;
 
 .dark-mode .bar {
     color: white;
+    background-color: white;
 }
 
 @media (max-width: 991px) {
