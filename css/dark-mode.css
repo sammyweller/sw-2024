@@ -24,7 +24,6 @@
 }
 
 .dark-mode .project,
-.dark-mode .projects,
 .dark-mode .project.first-project .project-img,
 .dark-mode .project.second-project .project-img,
 .dark-mode .project.third-project .project-img { 
@@ -68,12 +67,13 @@ color: white;
     color: var(--pink);
 }
 
-.dark-mode .project-tech-stack .bootstrap {
+.dark-mode .project-tech-stack .react {
     box-shadow: 2px 2px 0px var(--yellow);
     color: var(--yellow);
 }
 
-.dark-mode .project-tech-stack .php {
+.dark-mode .project-tech-stack .php,
+.dark-mode .project-tech-stack .bootstrap {
     box-shadow: 2px 2px 0px var(--blue);
     color: var(--blue);
 }
@@ -103,5 +103,14 @@ color: white;
     color: var(--purple);
 }
 
+}
+
+@media (max-width: 880px) {
+    .dark-mode .project-inner,
+    .dark-mode .project-container:nth-child(1) .image-box,
+    .dark-mode .project-container:nth-child(2) .image-box,
+    .dark-mode .project-container:nth-child(3) .image-box {
+        background-color: var(--dark-mode);
+    }
 }
 

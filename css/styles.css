@@ -13,6 +13,7 @@
 
 body {
     color: var(--dark);
+    background-color: var(--body);
     font-family: 'Hind', sans-serif;
     display: flex;
     flex-direction: column;
@@ -42,6 +43,7 @@ h1 {
 
 h2 {
     font-size: 42px;
+    margin-bottom: 40px;
 }
 
 h3 {
@@ -63,7 +65,7 @@ h3 {
     border: 2px solid;
     color: var(--dark);
     position: relative;
-    background-color: white;
+    background-color: var(--body);
     top: 0;
 }
 
@@ -72,15 +74,15 @@ h3 {
 }
 
 .btn::after {
-    content: ""; 
-    position: absolute; 
+    content: "";
+    position: absolute;
     top: 10px;
     left: 0;
     height: 100%;
-    width: 100%; 
-    background: linear-gradient(to right,var(--purple), var(--pink), var(--green));
+    width: 100%;
+    background: linear-gradient(to right, var(--purple), var(--pink), var(--green));
     border-radius: 3px;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .btn:hover::after {
@@ -89,7 +91,7 @@ h3 {
 
 
 .container-padding {
-    padding: 20px 40px
+    padding: 60px 40px
 }
 
 .container-width {
@@ -141,16 +143,16 @@ h3 {
 .nav-item::after {
     content: '';
     position: absolute;
-    width: 0; 
+    width: 0;
     height: 3px;
     left: 0;
-    bottom: 7px; 
+    bottom: 7px;
     background: linear-gradient(to right, var(--purple), var(--pink), var(--green));
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 .nav-item:hover::after {
-    width: 100%; 
+    width: 100%;
 }
 
 /* Hamburger Icon */
@@ -195,7 +197,7 @@ h3 {
     justify-content: space-between;
     gap: 60px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 .intro div:first-of-type {
@@ -207,7 +209,7 @@ h3 {
 .intro-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 8px;
     display: block;
 }
@@ -222,15 +224,15 @@ h3 {
 
 
 .intro-img-container::after {
-    content: ""; 
-    position: absolute; 
+    content: "";
+    position: absolute;
     bottom: 18px;
     right: 18px;
     height: 100%;
     width: 100%;
     background: linear-gradient(45deg, var(--purple), var(--pink), var(--green));
-    border-radius: 10px; 
-    z-index: -1;   
+    border-radius: 10px;
+    z-index: -1;
 }
 
 
@@ -246,25 +248,27 @@ h3 {
 
 
 .box {
-    background-color: white;
+    background-color: var(--body);
     border-radius: 10px;
     border: 2px solid;
     color: var(--dark);
     width: 100%;
-    padding: 20px 25px;
+    padding: 20px 25px 30px 25px;
     position: relative;
+    text-align: center;
+    font-size: 18px;
 }
 
 .box::after {
-    content: ""; 
-    position: absolute; 
+    content: "";
+    position: absolute;
     top: 10px;
     left: 10px;
     height: 100%;
     width: 100%;
     background: linear-gradient(45deg, var(--purple), var(--pink), var(--green));
-    border-radius: 10px; 
-    z-index: -1;   
+    border-radius: 10px;
+    z-index: -1;
 }
 
 
@@ -303,109 +307,52 @@ h3 {
 
 .work h2 {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 
 /* Projects */
 
 .projects {
-    background: linear-gradient(45deg, var(--purple), var(--pink), var(--green));
     padding-bottom: 80px;
 }
 
-
 .projects h2 {
     text-align: center;
-    margin-top: 80px;
 }
 
-.projects-container {    
-    display:flex;
+.projects-container {
+    display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
-    margin:auto;
-    position: relative;
-    overflow: hidden;
+    margin: auto;
 }
 
-
-.swipebox {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-    padding-top: 40px;
-}
-
-.project-box {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease;
-}
 
 .project-container {
-    display: none; 
-    padding: 20px;
-    margin: 0 60px;
-    gap:40px; 
-}
-
-.project-container.active {
-    display: flex ;
+    display: flex;
     flex-direction: row;
 }
 
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    background: none;
-}
-
-button.prev {
-    left: 0;
-}
-
-button.next {
-    right: 0;
-}
-
-button:focus {
-    outline: none;
-}
-
-.dots-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.dot {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    background-color: white;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: var(--dark);
-}
-
-/* end of Swipe Box */
 
 .project {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
+    background: white;
 }
 
+.project-inner {
+    max-width: 600px;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 40px;
+}
+
+.project-container:nth-child(2) .project-inner {
+    margin-right: auto;
+    margin-left: 0;
+}
 
 .project-skills {
     margin-top: 20px;
@@ -418,14 +365,16 @@ button:focus {
 .project-skills a {
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.5; 
-    text-underline-offset: 4px; 
+    line-height: 1.5;
+    text-underline-offset: 4px;
 }
 
 
 .project .project-tech-stack {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .project-tech-stack p {
@@ -435,28 +384,43 @@ button:focus {
     box-shadow: 2px 2px 0px var(--dark);
     border-radius: 25px;
     border: 2px solid;
+    margin-bottom: 0px;
 }
 
 .image-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 475px;
+    width: 50%;
+    padding: 40px;
+}
+
+.project-container:nth-child(1) .image-box {
+    background: var(--pink);
+}
+
+.project-container:nth-child(2) .image-box {
+    background: var(--green);
+}
+
+.project-container:nth-child(3) .image-box {
+    background: var(--purple);
 }
 
 
-  .website-image {
-    max-width:100%;
-    width:100%;
-  }
-  
+.project-container:nth-child(2) .image-box {
+    display: flex;
+    justify-content: flex-end;
+}
 
+.website-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
 
 
 /* About Me */
 
 .about {
-    padding-top: 80px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,7 +433,7 @@ button:focus {
 
 
 .about-skills {
-    display:flex;
+    display: flex;
     gap: 40px;
     text-align: center;
     padding-top: 20px;
@@ -492,27 +456,31 @@ button:focus {
 .contact {
     padding-top: 100px;
     padding-bottom: 140px;
-    display:flex;
-    gap:60px;
+    display: flex;
+    gap: 60px;
 }
 
 .contact p {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 
 
 .contact .contact-details {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.contact .contact-details  h2 {
+    margin-bottom: 20px;
 }
 
 .contact-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 8px;
     display: block;
 }
@@ -527,24 +495,24 @@ button:focus {
 
 
 .contact-img-container::after {
-    content: ""; 
-    position: absolute; 
+    content: "";
+    position: absolute;
     bottom: 18px;
     right: 18px;
     height: 100%;
     width: 100%;
     background: linear-gradient(45deg, var(--purple), var(--pink), var(--green));
-    border-radius: 10px; 
-    z-index: -1;   
+    border-radius: 10px;
+    z-index: -1;
 }
 
 
 
 
-@media (max-width: 991px ) {
+@media (max-width: 991px) {
 
     .navbar {
-        justify-content:flex-start;
+        justify-content: flex-start;
     }
 
     .navbar-toggler {
@@ -554,7 +522,7 @@ button:focus {
 
     .nav-item::after,
     .nav-item:hover::after {
-        content: none; 
+        content: none;
     }
 
     .nav-item:hover {
@@ -562,7 +530,7 @@ button:focus {
     }
 
     .navbar-collapse {
-        padding:20px;
+        padding: 20px;
         border: 2px solid;
         color: var(--dark);
         border-radius: 20px;
@@ -570,13 +538,13 @@ button:focus {
     }
 
     .navbar-nav {
-        gap:20px;
+        gap: 20px;
     }
 
     .navbar-nav a {
         font-size: 18px;
     }
-    
+
     .project-container.active {
         flex-direction: column-reverse;
         align-items: center;
@@ -584,7 +552,59 @@ button:focus {
 }
 
 
-@media (max-width: 781px ) {
+
+@media (max-width: 880px) {
+    .project-container {
+        flex-direction: column-reverse;
+    }
+
+    .image-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project-inner {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0 40px 40px;
+    }
+
+    .project-container:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .project-container:nth-child(2) .image-box {
+        justify-content: center;
+    }
+
+    .website-image {
+        max-width: 500px;
+    }
+
+    .project-container.first-project .project {
+        background: var(--pink);
+    }
+
+    .project-container.second-project .project {
+        background: var(--green);
+    }
+
+    .project-container.third-project .project {
+        background: var(--purple);
+    }
+
+
+
+
+}
+
+
+@media (max-width: 781px) {
 
     h1 {
         font-size: 42px;
@@ -594,6 +614,10 @@ button:focus {
         font-size: 34px;
     }
 
+    .container-padding {
+        padding: 40px;
+    }
+
     .intro {
         flex-direction: column-reverse;
         align-items: center;
@@ -601,9 +625,10 @@ button:focus {
 
     .duties {
         flex-direction: column;
+        padding-bottom: 40px;
     }
 
-    .duties .box:nth-of-type(2), 
+    .duties .box:nth-of-type(2),
     .duties .box:nth-of-type(3) {
         margin-top: 50px;
     }
@@ -613,8 +638,12 @@ button:focus {
     }
 
     .contact {
-        flex-direction: column-reverse;  
-        align-items: center;     
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .projects {
+        padding-bottom: 20px;
     }
 
     .project-container {
@@ -624,6 +653,7 @@ button:focus {
         padding: 0px;
 
     }
+
     button.prev {
         left: 100px;
     }
@@ -634,7 +664,8 @@ button:focus {
 
 
 
-    button.prev, button.next {
+    button.prev,
+    button.next {
         top: 90%;
     }
 
@@ -651,14 +682,19 @@ button:focus {
 
 
 
-@media (max-width: 550px ) {
+@media (max-width: 550px) {
 
     .navbar {
         padding: 20px;
     }
 
+
     .container-padding {
-        padding:40px 20px;
+        padding: 40px 20px;
+    }
+
+    .intro {
+        padding-top: 60px;
     }
 
     .website-image {
@@ -685,7 +721,8 @@ button:focus {
         padding-bottom: 80px;
     }
 
-    .work, .about {
+    .work,
+    .about {
         padding-top: 60px;
     }
 
@@ -697,9 +734,9 @@ button:focus {
 }
 
 
-@media (max-width: 400px ) {
+@media (max-width: 400px) {
     .intro-img-container {
-    width: 85%;
-    margin-right: -15px;
+        width: 85%;
+        margin-right: -15px;
     }
 }
